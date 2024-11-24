@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bienvenido a nuestra landing page. Ofrecemos soluciones profesionales para tu negocio.">
+    <meta name="keywords" content="landing page, soluciones profesionales, negocios, servicios">
+    <meta name="author" content="Tu Nombre o Empresa">
+    <title>Landing Page Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body>
+
+    
+ <!-- Navbar -->
+ <nav class="bg-gray-200 shadow-md py-4">
+    <div class="container mx-auto flex items-center justify-between px-6">
+        <a href="#home" class="text-xl font-bold text-gray-800 hover:text-green-500 transition-colors duration-300">Dot Dager</a>
+        <ul class="flex space-x-8">
+            <li><a href="#home" class="text-gray-700 hover:text-green-500 transition-colors duration-300">hola</a></li>
+            <li><a href="#services" id="canalesBtn" class="text-gray-700 hover:text-green-500 transition-colors duration-300">Canales</a></li>
+            <li><a href="#about" class="text-gray-700 hover:text-green-500 transition-colors duration-300">Sobre mí</a></li>
+            <li><a href="#contact" class="text-gray-700 hover:text-green-500 transition-colors duration-300">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-8 rounded-lg w-96">
+        <h2 class="text-2xl font-semibold mb-4">Canales</h2>
+        <ul>
+            <li class="flex items-center space-x-4 mb-4">
+                <i class="fas fa-youtube text-red-500 text-2xl"></i>
+                <a href="https://www.youtube.com" target="_blank" class="text-gray-700 hover:text-green-500">YouTube</a>
+            </li>
+            <li class="flex items-center space-x-4 mb-4">
+                <i class="fas fa-twitch text-purple-500 text-2xl"></i>
+                <a href="https://www.twitch.tv" target="_blank" class="text-gray-700 hover:text-green-500">Twitch</a>
+            </li>
+            <li class="flex items-center space-x-4 mb-4">
+                <i class="fas fa-twitter text-blue-500 text-2xl"></i>
+                <a href="https://www.twitter.com" target="_blank" class="text-gray-700 hover:text-green-500">Twitter</a>
+            </li>
+        </ul>
+        <button id="closeModal" class="mt-4 text-red-500 hover:text-red-700">Cerrar</button>
+    </div>
+</div>
+
+
+    <header>
+        <h1>Dot Dager</h1>
+        <p>Full-stack senior y contador serial de chistes de mierda. </p>
+        <img src="img/dager.png" class="dagger" alt="" srcset="">
+    </header>
+
+    <section>
+        <h2  id="about" style="text-align: center;">¿Quien soy?</h2>
+        <div class="benefits">
+            <div class="benefit-item">
+                <h3>Programación</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem molestias modi quidem? Eos quibusdam dolorem dicta quasi commodi quis aperiam odio eveniet, odit porro velit, molestias soluta consequatur doloremque ipsum.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>filosofía</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem molestias modi quidem? Eos quibusdam dolorem dicta quasi commodi quis aperiam odio eveniet, odit porro velit, molestias soluta consequatur doloremque ipsum.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Musica</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem molestias modi quidem? Eos quibusdam dolorem dicta quasi commodi quis aperiam odio eveniet, odit porro velit, molestias soluta consequatur doloremque ipsum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="full-screen-section">
+        <!-- Texto a la izquierda -->
+        <div class="text-container">
+            <h2>Github</h2>
+            <h3>Proyectos de innecesariamente complejos</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+        </div>
+    
+        <!-- Imagen a la derecha -->
+        <div class="image-container"></div>
+    </section>
+    
+
+    
+
+
+
+    <footer>
+        <p>&copy; 2024 [Dot Dager]. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+<script>
+    // Obtener elementos del modal y el botón de canales
+    const modal = document.getElementById('modal');
+    const canalesBtn = document.getElementById('canalesBtn');
+    const closeModal = document.getElementById('closeModal');
+
+    // Mostrar el modal cuando se haga clic en el botón "Canales"
+    canalesBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.remove('hidden'); // Mostrar el modal
+    });
+
+    // Cerrar el modal cuando se haga clic en "Cerrar"
+    closeModal.addEventListener('click', () => {
+        modal.classList.add('hidden'); // Ocultar el modal
+    });
+</script>
+</html>
